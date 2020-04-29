@@ -10,5 +10,4 @@ variable "location" {
 
 variable "vnet-name" {
     description = "name of vnet"
-    default = "tharris-vnet"
 }
