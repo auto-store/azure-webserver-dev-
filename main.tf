@@ -48,10 +48,10 @@ resource "azurerm_linux_virtual_machine" "example" {
     azurerm_network_interface.example.id,
   ]
 
-  admin_ssh_key {
-    username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
-  }
+  // admin_ssh_key {
+  //   username   = "adminuser"
+  //   public_key = file("~/.ssh/id_rsa.pub")
+  // }
 
   os_disk {
     caching              = "ReadWrite"
@@ -70,5 +70,4 @@ resource "azurerm_subnet" "example" {
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefix       = "10.0.2.0/24"
- }
 }
